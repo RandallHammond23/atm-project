@@ -1,19 +1,29 @@
-"use strict"
+"use strict";
+const{ getBalance, withdraw, deposit, validatePin } = require(`./atm`);
 
-function mainMenu(){
-    validatePin();
-    if(validatePin = true){
-        validatePin();
+
+mainMenu(userInput);
+
+
+function mainMenu(userInput){
+    validatePin(userInput);
+    if(ture){
+     promptFor("What would you like to do today?", chars);
     }
     else{
-        return promptFor("What would you like to do today?", chars);
+        return validatePin(userInput); 
     }
     switch(userInput){
-    case getBalance:
+    case "get balance":
+        getBalance(balance);
+        return balance;
         break;
-    case withdraw:
+    case "withdraw":
+        withdraw(balance)
         break;
-    case deposit:
+    case "deposit":
+        deposit(balance);
+        return;
         break;
     case "quit":
         alert("Have a great day!")

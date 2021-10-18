@@ -1,7 +1,12 @@
-"use strict"
+"use strict";
+
+const PromptSync = require("prompt-sync");
 
 
 
+let userInput = promptFor("What is your pin?", chars);
+
+promptFor() = require(PromptSync);
 var pinNumber = userInput;
 
 var balance = 7000;
@@ -22,4 +27,4 @@ module.export = {
     bal: balance,
     promptFor: promptFor,
     chars: chars
-}
+};

@@ -1,21 +1,22 @@
-"use strict"
+"use strict";
 
 
-const {pin, balance, promptFor, chars} = require();
+const { pin, bal, promptFor, chars } = require( `./account`);
+
+
+bal = 7000;
 
 
 
-balance;
 
-
-
-function getBalance(balance){
-    alert("Your balance is" + balance );
+function getBalance(bal){
+   
+    alert("Your balance is" + bal );
 
 }
 
 
-function withdraw(){
+function withdraw(balance){
 let userInput = promptFor("How much do you want to withdraw?", chars);
 let withdrawAmount; 
  switch(number){
@@ -48,7 +49,22 @@ return newBalance;
 
 }
 
-function validatePin(){
+function validatePin(userInput){
+    userInput = promptFor("What is your pin?", chars);
+    if(userInput != pin){
+        promptFor("What is your pin?",chars);
+    }
 
-    
+
 }
+
+
+
+
+module.export ={
+    getBalance: getBalance,
+    withdraw: withdraw,
+    deposit: deposit,
+    validatePin: validatePin
+
+};
